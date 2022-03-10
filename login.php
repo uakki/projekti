@@ -3,11 +3,11 @@
  ?>
 
  <section class="signup-form">
-   <h2>Kirjaudu</h2>
+   <h2>Kirjaudu sisään</h2>
    <form action="includes/login.inc.php" method="post">
-     <input type="text" name="uid" placeholder="User name/email...">
-     <input type="password" name="pwd" placeholder="Password...">
-     <button type="submit" name="submit">Log In</button>
+     <input type="text" name="uid" placeholder="Käyttäjätunnus..."><br></br>
+     <input type="password" name="pwd" placeholder="Salasana..."><br></br>
+     <button type="submit" name="submit">Kirjaudu</button>
    </form>
  </section>
  <?php

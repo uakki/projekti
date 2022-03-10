@@ -15,14 +15,55 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="index.php" class="active">Etusivu</a>
   <?php
-    if(isset($_SESSION["useruid"])){
-      echo "<a href='userpage.php'>Omat</a>";
-      echo "<a href='includes/logout.inc.php'>Kirjaudu ulos</a>";
-    }else{
-      echo "<a href='signup.php'>Rekisteröidy</a>";
-      echo "<a href='login.php'>Kirjaudu</a>";
+    $page = $_SERVER['PHP_SELF'];
+    if($page=="/projekti/index.php"){
+      echo "<a href='index.php' class='active'>Etusivu</a>";
+      if(isset($_SESSION["useruid"])){
+        echo "<a href='userpage.php'>Omat</a>";
+        echo "<a href='includes/logout.inc.php'>Kirjaudu ulos</a>";
+      }else{
+        echo "<a href='signup.php'>Rekisteröidy</a>";
+        echo "<a href='login.php'>Kirjaudu</a>";
+      }
+
+    }elseif($page=="/projekti/signup.php"){
+      echo "<a href='index.php'>Etusivu</a>";
+      if(isset($_SESSION["useruid"])){
+        echo "<a href='userpage.php'>Omat</a>";
+        echo "<a href='includes/logout.inc.php'>Kirjaudu ulos</a>";
+      }else{
+        echo "<a href='signup.php' class='active'>Rekisteröidy</a>";
+        echo "<a href='login.php'>Kirjaudu</a>";
+      }
+
+    }elseif($page=="/projekti/login.php"){
+      echo "<a href='index.php'>Etusivu</a>";
+      if(isset($_SESSION["useruid"])){
+        echo "<a href='userpage.php'>Omat</a>";
+        echo "<a href='includes/logout.inc.php'>Kirjaudu ulos</a>";
+      }else{
+        echo "<a href='signup.php'>Rekisteröidy</a>";
+        echo "<a href='login.php' class='active'>Kirjaudu</a>";
+      }
+    }elseif($page=="/projekti/userpage.php"){
+      echo "<a href='index.php'>Etusivu</a>";
+      if(isset($_SESSION["useruid"])){
+        echo "<a href='userpage.php' class='active'>Omat</a>";
+        echo "<a href='includes/logout.inc.php'>Kirjaudu ulos</a>";
+      }else{
+        echo "<a href='signup.php'>Rekisteröidy</a>";
+        echo "<a href='login.php'>Kirjaudu</a>";
+      }
+    }elseif($page=="/projekti/newevent.php"){
+      echo "<a href='index.php'>Etusivu</a>";
+      if(isset($_SESSION["useruid"])){
+        echo "<a href='userpage.php' class='active'>Omat</a>";
+        echo "<a href='includes/logout.inc.php'>Kirjaudu ulos</a>";
+      }else{
+        echo "<a href='signup.php'>Rekisteröidy</a>";
+        echo "<a href='login.php'>Kirjaudu</a>";
+      }
     }
 
    ?>

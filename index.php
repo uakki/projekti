@@ -19,11 +19,11 @@
      if(is_null($image)){
        $image = "stock.jpg";
      }
-     echo "<div class='eventbox'><div class='imgbox' ><img src=images/".$image." alt='image' width='300' height='200'></div><div class='datetime'>".($row['concertsDate'])."<br></br>klo ".($row['concertsTime'])."</div><div><h2>".($row['concertsName'])."</h2></div><div class='info'>".($row['concertsInfo'])."</div><div class='place'>".($row['concertsPlace'])."</div></div>";
+     echo "<div><h2>".($row['concertsName'])."</h2></div><div class='eventbox'><div class='imgbox' ><img src=images/".$image." alt='image' width='300' height='200'></div><div class='datetime'>".($row['concertsDate'])." klo ".($row['concertsTime'])."<div class='place'>".($row['concertsPlace'])."</div></div><br><div class='info'>".($row['concertsInfo'])."</div></div>";
    }
 
    ?>
-
+<br>
 </div>
 
 <?php
