@@ -1,6 +1,6 @@
 <?php
 
-$serverName = "127.0.0.1:50690";
+$serverName = "local";
 $dBUserName = "azure";
 $dBPassword = "6#vWHD_$";
 $dBName = "project";
